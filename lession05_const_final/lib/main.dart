@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lession05_const_final/user.dart';
+import 'my_string.dart';
 
 // Từ khóa "const" được dùng khi giá trị của biến được biết trước và không đổi..
 
@@ -10,6 +11,7 @@ import 'package:lession05_const_final/user.dart';
 
 // instance variables: chỉ có thể là final không thể là const
 // const: Chỉ có thể là static variable
+// phai add const modifier vào constructor
 
 const double pi = 3.14;
 const String TAG = "MY_TAG";
@@ -17,8 +19,15 @@ const String TAG = "MY_TAG";
 final int a = 0;
 
 void main() {
-  User user = User(1);
-  User.name;
+  User user = const User(1);
+  User user2 = const User(1);
+  if (user == user2) {
+    print("Cung dia chi o nho");
+  } else {
+    print("khac dia chi o nho");
+  }
+  // User.name;
+  // print(msg_error);
   //user.id = 2; // Error: The final variable 'id' can only be set once.
   // runApp(const MyApp());
 }
