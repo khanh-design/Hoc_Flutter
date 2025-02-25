@@ -7,6 +7,8 @@ import 'package:lession03_mixin/readbook.dart';
 // - Có thể truy xuất hàm của lớp khác mà không phải quan hệ kế thừa.
 // - mixin có thể giới hạn kết hợp với 1 thằng nào đó
 // - nghĩa là chỉ những thằng nào kế thừa thằng đó mới được trộn lẫn với mixin đó
+
+// - extention: mở rộng cho 1 class nào đó
 class User extends Person with Football, Readbook, Music {
   int id = 0;
   String name = '';
@@ -27,5 +29,11 @@ class User extends Person with Football, Readbook, Music {
   @override
   void music1() {
     // TODO: implement music1
+  }
+}
+
+extension MyExtension on User {
+  void logExtention() {
+    print('This is extension');
   }
 }
