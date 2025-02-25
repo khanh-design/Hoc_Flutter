@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lession05_const_final/user.dart';
-import 'my_string.dart';
 
 // Từ khóa "const" được dùng khi giá trị của biến được biết trước và không đổi..
 
