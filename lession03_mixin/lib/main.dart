@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lession03_mixin/user.dart';
 
 void main() {
+  User user = User(1, 'John Doe');
+  user.logfavorite();
+  user.play();
   // runApp(const MyApp());
 }
 
