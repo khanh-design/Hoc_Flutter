@@ -29,7 +29,7 @@ void main() {
 class MyWidget extends StatelessWidget {
   final bool loading;
 
-  MyWidget(this.loading);
+  const MyWidget(this.loading, {super.key});
 
   @override
   Widget build(BuildContext context) {
