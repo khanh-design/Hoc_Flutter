@@ -1,13 +1,12 @@
-/**
- * Cách tạo 1 Object trong Dart
- * 1. Khai báo biến
- * 2. Khởi tạo bằng cách gọi constructor
- * 3. Gán giá trị cho thuộc tính
- * 4. In ra giá trị của Object
- * 5. Sử dụng getter và setter
- * 6. Sử dụng private (accsetss modifier)
- * 7. Sử dụng toString
- */
+/// Cách tạo 1 Object trong Dart
+/// 1. Khai báo biến
+/// 2. Khởi tạo bằng cách gọi constructor
+/// 3. Gán giá trị cho thuộc tính
+/// 4. In ra giá trị của Object
+/// 5. Sử dụng getter và setter
+/// 6. Sử dụng private (accsetss modifier)
+/// 7. Sử dụng toString
+library;
 
 class User {
   // Khai bao thuoc tinh cua doi tuong
