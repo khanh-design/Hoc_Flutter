@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: SafeArea(child: Scaffold(body: Center(child: MyWidget()))),
+      theme: ThemeData(fontFamily: 'Time New Ronam'),
+      home: SafeArea(child: Scaffold(body: MyWidget())),
       debugShowCheckedModeBanner: false,
     ),
   );
@@ -29,6 +30,19 @@ class MyWidget extends StatelessWidget {
       overflow: TextOverflow.clip, // Giống như xem thêm ấy.
 
       textScaleFactor: 1.5,
+
+      style: TextStyle(
+        color: Colors.pink,
+        //backgroundColor: Colors.greenAccent,
+        fontSize: 30,
+        fontWeight: FontWeight.w100, // Độ đạm nhạt của text.
+        fontStyle: FontStyle.italic, // In nghieng
+        fontFamily: 'Times New Roman',
+
+        // wordSpacing: 20, // Căn chỉnh giữa các từ.
+        // letterSpacing: 10, // Căn chỉnh các ký tự.
+        decoration: TextDecoration.lineThrough, // gạch chân ở giữa
+      ),
     );
   }
 }
