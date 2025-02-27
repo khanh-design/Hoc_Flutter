@@ -4,6 +4,7 @@ void main() {
   runApp(
     MaterialApp(
       home: SafeArea(child: Scaffold(body: Center(child: MyWidget()))),
+      debugShowCheckedModeBanner: false,
     ),
   );
 }
@@ -21,11 +22,13 @@ class MyWidget extends StatelessWidget {
       textDirection: TextDirection.ltr,
 
       // Căn lề
-      textAlign: TextAlign.right,
+      textAlign: TextAlign.justify,
 
       //set text tối đa bao nhiêu dòng
       maxLines: 3,
       overflow: TextOverflow.clip, // Giống như xem thêm ấy.
+
+      textScaleFactor: 1.5,
     );
   }
 }
