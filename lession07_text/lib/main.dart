@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      theme: ThemeData(fontFamily: 'Time New Ronam'),
+      theme: ThemeData(fontFamily: 'Time New Roman'),
       home: SafeArea(child: Scaffold(body: MyWidget())),
       debugShowCheckedModeBanner: false,
     ),
