@@ -13,7 +13,7 @@ void main() {
       //Bước 4: Sử dụng thành phần để xây dựng giao diện gười dùng
       home: SafeArea(
         child: Scaffold(
-          body: Center(child: MyWidget(false)),
+          body: Center(child: MyWidget2(false)),
           // appBar: AppBar(
           //   backgroundColor: Colors.red,
           //   title: Text('Tu hoc Flutter'),
@@ -26,20 +26,57 @@ void main() {
   );
 }
 
-class MyWidget extends StatelessWidget {
+// class MyWidget extends StatelessWidget {
+//   final bool loading;
+
+//   const MyWidget(this.loading, {super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     // TODO: implement build
+//     // if (loading == true) {
+//     //   return const CircularProgressIndicator();
+//     // } else {
+//     //   return const Text('State');
+//     // }
+
+//     return loading ? const CircularProgressIndicator() : const Text('State');
+//   }
+// }
+
+class MyWidget2 extends StatefulWidget {
   final bool loading;
 
-  const MyWidget(this.loading, {super.key});
+  MyWidget2(this.loading);
+
+  @override
+  State<StatefulWidget> createState() {
+    return MyWidget2State();
+  }
+}
+
+class MyWidget2State extends State<MyWidget2> {
+  // hàm gọi sau khi khởi tạo tk MyWidget2
+  //nhưng chạy trước hàm build ở trong MyWidget2State
+
+  late bool _localoading;
+
+  @override
+  void initState() {
+    _localoading = widget.loading;
+  }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    // if (loading == true) {
-    //   return const CircularProgressIndicator();
-    // } else {
-    //   return const Text('State');
-    // }
+    return _localoading
+        ? const CircularProgressIndicator()
+        : FloatingActionButton(onPressed: onClickButton);
+  }
 
-    return loading ? const CircularProgressIndicator() : const Text('State');
+  void onClickButton() {
+    // Nó load lại state mới chạy lại hàm build.
+    setState(() {
+      _localoading = false;
+    });
   }
 }
