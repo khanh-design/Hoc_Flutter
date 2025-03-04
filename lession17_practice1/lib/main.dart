@@ -84,10 +84,14 @@ class MyWidget extends StatelessWidget {
               SizedBox(width: 10),
               Expanded(
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                  ),
                   onPressed: () {},
                   child: Text(
                     'Submit',
-                    style: TextStyle(fontSize: 14, color: Colors.white),
+                    style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
                 ),
               ),
