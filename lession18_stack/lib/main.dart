@@ -27,15 +27,27 @@ class MyWidget extends StatelessWidget {
       width: 500,
       height: 500,
       child: Stack(
-        textDirection: TextDirection.rtl,
+        //textDirection: TextDirection.rtl,
         // alignment: Alignment.bottomCenter,
+        clipBehavior: Clip.none, // cho 1 Container con chàn viền ra ngoài.
         fit: StackFit.expand,
         children: [
           Container(color: Colors.blue, height: 300, width: 300),
 
-          Container(color: Colors.green, height: 200, width: 200),
+          Positioned(
+            left: 10,
+            bottom: 10,
+            child: Container(color: Colors.green, height: 200, width: 200),
+          ),
 
-          Container(color: Colors.pink, height: 100, width: 100),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Container(color: Colors.pink, height: 100, width: 100),
+          ),
+
+          Container(color: Colors.yellow, height: 70, width: 70),
+
+          Container(color: Colors.red, height: 50, width: 50),
         ],
       ),
     );
