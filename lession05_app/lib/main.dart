@@ -47,7 +47,7 @@ void main() {
 class MyWidget2 extends StatefulWidget {
   final bool loading;
 
-  MyWidget2(this.loading);
+  const MyWidget2(this.loading, {super.key});
 
   @override
   State<StatefulWidget> createState() {

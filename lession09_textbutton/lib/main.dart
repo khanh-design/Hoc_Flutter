@@ -22,6 +22,8 @@ void main() {
 ///     + Đổichild thành lable khi thêm icon vào trong button.
 ///  - disable:
 class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

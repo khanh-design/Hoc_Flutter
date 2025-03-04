@@ -17,6 +17,8 @@ void main() {
 //margin: Khoảng cách với các thằng xung quanh
 
 class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Card(
